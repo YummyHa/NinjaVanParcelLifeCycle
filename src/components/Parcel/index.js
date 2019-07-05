@@ -6,17 +6,16 @@ import './styles.scss';
 
 class Parcel extends Component {
   render() {
-    const { color, onClick, parcel } = this.props;
+    const { visible, color, onClick, parcel } = this.props;
     return (
-      this.props.visible === true ?
-        <div className="parcel-container" data-test="parcelContainer">
+      visible ? <div className='parcel-container fade-in' data-test="parcelContainer">
         <ButtonBase
           style={{ backgroundColor: color }}
           className="item-box"
           onClick={onClick}
         >
-          <Typography data-test="parcelId" >id: {parcel.id}</Typography>
-          <Typography data-test="parcelStatus">status: {parcel.status}</Typography>
+          <Typography data-test="parcelId" >id: {parcel !== null ? parcel.id : null}</Typography>
+          <Typography data-test="parcelStatus">status: {parcel !== null ? parcel.status : null}</Typography>
         </ButtonBase>
       </div> : null
     );
@@ -24,6 +23,7 @@ class Parcel extends Component {
 }
 
 Parcel.propTypes = {
+  visible: PropTypes.bool,
   color: PropTypes.string,
   onClick: PropTypes.func,
   parcel: PropTypes.shape({

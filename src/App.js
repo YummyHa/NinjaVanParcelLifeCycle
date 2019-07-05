@@ -5,6 +5,8 @@ import Body from './components/body';
 
 import { startOver, updateParcel } from './actions/parcel'
 
+import './App.scss';
+
 class App extends Component {
   render() {
     const props = this.props;

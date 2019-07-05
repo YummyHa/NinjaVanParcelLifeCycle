@@ -7,7 +7,7 @@ import './styles.scss';
 class ActionsArea extends Component {
   render() {
     const { visible, statusCode, onUpdateParcel, onCancelParcel } = this.props;
-    return visible ? <div className="control-container" data-test="controlContainer">
+    return visible ? <div className="control-container fade-in" data-test="controlContainer">
       <span className="control-buttons-label">Actions</span>
       <div className="control-buttons-container">
         <Button

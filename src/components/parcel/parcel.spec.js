@@ -14,6 +14,7 @@ describe('Component: Parcel', () => {
 
     it('Should not throw a warning', () => {
       const expectedProps = {
+        visible: true,
         color: '#FFF',
         onClick: () => {},
         parcel: {
