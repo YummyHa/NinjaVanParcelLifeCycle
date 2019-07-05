@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/NinjaVanParcelLifeCycle/precache-manifest.bf740b871f61665043f3ae4f2cf8e210.js"
+  "/NinjaVanParcelLifeCycle/precache-manifest.d68584643891502795998622d6960198.js"
 );
 
 self.addEventListener('message', (event) => {
