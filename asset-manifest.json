@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NinjaVanParcelLifeCycle/static/css/main.17ea65cc.chunk.css",
+    "main.js": "/NinjaVanParcelLifeCycle/static/js/main.e81cbd76.chunk.js",
+    "main.js.map": "/NinjaVanParcelLifeCycle/static/js/main.e81cbd76.chunk.js.map",
+    "runtime~main.js": "/NinjaVanParcelLifeCycle/static/js/runtime~main.23ac24b2.js",
+    "runtime~main.js.map": "/NinjaVanParcelLifeCycle/static/js/runtime~main.23ac24b2.js.map",
+    "static/js/2.7a4f56f9.chunk.js": "/NinjaVanParcelLifeCycle/static/js/2.7a4f56f9.chunk.js",
+    "static/js/2.7a4f56f9.chunk.js.map": "/NinjaVanParcelLifeCycle/static/js/2.7a4f56f9.chunk.js.map",
+    "index.html": "/NinjaVanParcelLifeCycle/index.html",
+    "precache-manifest.bf740b871f61665043f3ae4f2cf8e210.js": "/NinjaVanParcelLifeCycle/precache-manifest.bf740b871f61665043f3ae4f2cf8e210.js",
+    "service-worker.js": "/NinjaVanParcelLifeCycle/service-worker.js",
+    "static/css/main.17ea65cc.chunk.css.map": "/NinjaVanParcelLifeCycle/static/css/main.17ea65cc.chunk.css.map"
+  }
+}
