@@ -1,0 +1,15 @@
+.paper-body {
+  padding: 10px;
+  .item-box {
+    background-color: #FA9917;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    p {
+      color: #FFFFFF;
+      text-transform: none;
+    }
+  }
+}
