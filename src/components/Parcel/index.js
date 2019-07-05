@@ -1,21 +1,36 @@
 import React, { Component } from "react";
 import { ButtonBase, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-export default class Parcel extends Component {
+class Parcel extends Component {
   render() {
+    const { color, onClick, parcel } = this.props;
     return (
-      <div className="paper-body">
-        {this.props.visible === true ? <ButtonBase
-          style={{ backgroundColor: this.props.color }}
+      this.props.visible === true ?
+        <div className="parcel-container" data-test="parcelContainer">
+        <ButtonBase
+          style={{ backgroundColor: color }}
           className="item-box"
-          onClick={this.props.onClick}
+          onClick={onClick}
         >
-          <Typography>id: {this.props.parcel.id}</Typography>
-          <Typography>status: {this.props.parcel.status}</Typography>
-        </ButtonBase> : ''}
-      </div>
+          <Typography data-test="parcelId" >id: {parcel.id}</Typography>
+          <Typography data-test="parcelStatus">status: {parcel.status}</Typography>
+        </ButtonBase>
+      </div> : null
     );
   }
 }
+
+Parcel.propTypes = {
+  color: PropTypes.string,
+  onClick: PropTypes.func,
+  parcel: PropTypes.shape({
+    id: PropTypes.string,
+    status: PropTypes.string,
+    statusCode: PropTypes.number
+  })
+}
+
+export default Parcel;

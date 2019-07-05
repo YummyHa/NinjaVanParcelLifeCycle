@@ -1,0 +1,16 @@
+.grid-container {
+  margin: 5px;
+  .grid-paper {
+    margin: 10px 10px 10px 0;
+    height: 30em;
+    .grid-item-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: #ededed;
+      height: 30px;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+}

@@ -1,16 +1,30 @@
 import React, { Component, Fragment } from 'react';
-import Header from './components/Header';
-import Body from './components/Body';
+import { connect } from 'react-redux';
+import Header from './components/header';
+import Body from './components/body';
+
+import { startOver, updateParcel } from './actions/parcel'
 
 class App extends Component {
   render() {
+    const props = this.props;
     return (
       <Fragment>
-        <Header />
-        <Body />
+        <Header {...props} />
+        <Body {...props} />
       </Fragment>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  const { parcel } = state.parcel;
+  return { parcel };
+}
+
+const mapDispatchToProps = {
+  startOver,
+  updateParcel
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

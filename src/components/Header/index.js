@@ -1,23 +1,23 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 import './styles.scss';
-import logo from '../../logo.png';
-
-import { startOver } from '../../actions/parcel'
+import logo from '../../assets/logo.png';
 
 class Header extends Component {
   render() {
+    const { parcel, startOver } = this.props;
     return (
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="default" data-test="appBar">
         <Toolbar classes={{ root: 'toolbar' }}>
           <img className="logo" alt="" src={logo} />
-          {this.props.parcel !== null ?
+          {parcel !== null ?
           <Button
             color="secondary"
             classes={{ label: 'start-over-button' }}
-            onClick={this.props.startOver}
+            onClick={startOver}
+            data-test="startOverBtn"
           >
             Start Over
           </Button> : null}
@@ -27,13 +27,13 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  const { parcel } = state.parcel;
-  return { parcel };
+Header.propTypes = {
+  parcel: PropTypes.shape({
+    id: PropTypes.string,
+    status: PropTypes.string,
+    statusCode: PropTypes.number
+  }),
+  startOver: PropTypes.func
 }
 
-const mapDispatchToProps = {
-  startOver
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default Header;
